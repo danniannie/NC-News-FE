@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
+import "../styles/ArticlePage.css";
 
 class ArticlePage extends Component {
   state = {

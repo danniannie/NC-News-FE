@@ -28,12 +28,3 @@ class Nav extends Component {
 }
 
 export default Nav;
-
-// const Nav = ({ topics }) => {
-//   return (
-
-//   );
-
-// };
-
-// export default Nav;
