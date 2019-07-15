@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
-
+import { Link } from "@reach/router";
 import ArticleCard from "./ArticleCard";
 
 class Articles extends Component {
@@ -12,6 +12,7 @@ class Articles extends Component {
     const { articles } = this.state;
     return (
       <section>
+        <nav>Sort by Date Comment Count Votes</nav>
         {articles.map(article => (
           <ArticleCard key={article.article_id} article={article} />
         ))}

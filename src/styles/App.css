@@ -2,7 +2,7 @@
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-rows: 3fr 1fr 10fr 2fr;
+  grid-template-rows: 3fr 1fr 10fr 1fr;
   grid-template-areas: "heading" "nav" "main" "footer";
   text-align: center;
 }

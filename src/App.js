@@ -11,6 +11,7 @@ import Articles from "./components/Articles";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import { Router } from "@reach/router";
+import ArticlePage from "./components/ArticlePage";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
         <Router className="main">
           <Articles path="/" />
           <Articles path="/topics/:topic" />
+          <ArticlePage path="articles/:article_id" />
         </Router>
         <Footer />
       </div>

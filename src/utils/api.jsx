@@ -15,3 +15,8 @@ export const fetchArticles = async topic => {
 
   return data.articles;
 };
+
+export const fetchArticlebyId = async article_id => {
+  const { data } = await axios.get(`${baseURL}/articles/${article_id}`);
+  return data.article;
+};
