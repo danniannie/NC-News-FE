@@ -18,6 +18,7 @@
 .main {
   grid-area: main;
   border: red solid 1px;
+  overflow-y: scroll;
 }
 .footer {
   grid-area: footer;

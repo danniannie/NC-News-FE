@@ -3,6 +3,7 @@ import "./styles/Heading.css";
 import "./styles/Main.css";
 import "./styles/Nav.css";
 import "./styles/Footer.css";
+import "./styles/ArticleCard.css";
 
 import React, { Component } from "react";
 import Heading from "./components/Heading";
@@ -12,9 +13,6 @@ import Nav from "./components/Nav";
 import { Router } from "@reach/router";
 
 class App extends Component {
-  state = {
-    topics: []
-  };
   render() {
     return (
       <div className="App">
@@ -22,6 +20,7 @@ class App extends Component {
         <Nav />
         <Router className="main">
           <Articles path="/" />
+          <Articles path="/topics/:topic" />
         </Router>
         <Footer />
       </div>
