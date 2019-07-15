@@ -1,0 +1,25 @@
+.App {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 3fr 1fr 10fr 2fr;
+  grid-template-areas: "heading" "nav" "main" "footer";
+  text-align: center;
+}
+
+.heading {
+  grid-area: heading;
+  border: 1px black solid;
+}
+.nav {
+  grid-area: nav;
+  border: green 1px solid;
+}
+.main {
+  grid-area: main;
+  border: red solid 1px;
+}
+.footer {
+  grid-area: footer;
+  border: blue solid 1px;
+}
