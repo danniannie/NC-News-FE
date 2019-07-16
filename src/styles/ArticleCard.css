@@ -4,4 +4,7 @@
   margin: 0px 0px;
   text-align: left;
   font-size: 0.9em;
+  color: black;
+
+  cursor: pointer;
 }

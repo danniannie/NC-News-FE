@@ -10,7 +10,7 @@ class ArticlePage extends Component {
   };
   render() {
     const { article, isLoading } = this.state;
-    console.log(article);
+
     return (
       <section>
         {" "}
@@ -24,7 +24,7 @@ class ArticlePage extends Component {
             <p>Created at: {article.created_at}</p>
             <p>Topic: {article.topic}</p>
             <section>
-              <Comments />
+              <Comments article_id={this.props.article_id} />
             </section>
           </section>
         )}

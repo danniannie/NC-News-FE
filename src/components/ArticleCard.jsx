@@ -6,7 +6,7 @@ const ArticleCard = ({ article: { title, article_id } }) => {
     <div>
       {" "}
       <Link to={`/articles/${article_id}`}>
-        <h4 className="articleCard">{title}</h4>
+        <p className="articleCard">{title}</p>
       </Link>
     </div>
   );

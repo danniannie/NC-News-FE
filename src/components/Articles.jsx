@@ -8,13 +8,13 @@ import Sort from "./Sort";
 class Articles extends Component {
   state = {
     articles: [],
-    isLoading: true,
+
     sort_by: "created_at",
     order: "asc"
   };
 
   render() {
-    const { articles, isLoading } = this.state;
+    const { articles } = this.state;
 
     return (
       <section className="main">

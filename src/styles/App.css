@@ -20,6 +20,7 @@
   grid-area: router;
   height: 71vh;
   width: 100vw;
+  overflow-y: scroll;
 }
 .main {
   height: 100%;
@@ -27,7 +28,7 @@
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr;
-
+  overflow-y: scroll;
   width: 100%;
 }
 .footer {
