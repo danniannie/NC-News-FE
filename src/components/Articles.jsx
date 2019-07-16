@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
-import { Link } from "@reach/router";
+
 import ArticleCard from "./ArticleCard";
 import "../styles/Articles.css";
 import Sort from "./Sort";
@@ -8,16 +8,18 @@ import Sort from "./Sort";
 class Articles extends Component {
   state = {
     articles: [],
-    isLoading: true
+    isLoading: true,
+    sort_by: "created_at",
+    order: "asc"
   };
 
   render() {
-    console.log(this.props);
     const { articles, isLoading } = this.state;
 
     return (
-      <section className="article">
-        <Sort />
+      <section className="main">
+        <Sort handleClick={this.handleClick} />
+
         <section className="articles">
           {articles.map(article => (
             <ArticleCard key={article.article_id} article={article} />
@@ -27,17 +29,31 @@ class Articles extends Component {
     );
   }
 
+  handleClick = event => {
+    const sort = event.target.id;
+    const sort_by = sort.split(" ")[0];
+    const order = sort.split(" ")[1];
+
+    this.setState({ sort_by, order });
+  };
+
   componentDidMount = async () => {
     const { topic } = this.props;
+    const { sort_by, order } = this.state;
 
-    const articles = await api.fetchArticles(topic);
+    const articles = await api.fetchArticles(topic, sort_by, order);
     this.setState({ articles });
   };
 
   componentDidUpdate = async (prevProps, prevState) => {
     const { topic } = this.props;
-    if (prevProps.topic !== topic) {
-      const articles = await api.fetchArticles(topic);
+    const { sort_by, order } = this.state;
+    if (
+      prevProps.topic !== topic ||
+      prevState.sort_by !== sort_by ||
+      prevState.order !== order
+    ) {
+      const articles = await api.fetchArticles(topic, sort_by, order);
       this.setState({ articles });
     }
   };

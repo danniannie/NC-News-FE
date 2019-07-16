@@ -1,24 +1,19 @@
-.article {
-  display: grid;
-  grid-template-rows: 0.5fr 12fr;
-  grid-template-areas: "sort" "articles";
-  margin: 0;
-}
-
-.sort {
-  grid-area: sort;
+.sortBy {
+  grid-column: 2 / 3;
+  grid-row: 1 /2;
   border: purple 1px solid;
-  position: fixed;
+
   background-color: black;
-  width: 100%;
+
   margin: 0;
   padding: 8px;
   color: white;
 }
 
 .articles {
-  grid-area: articles;
-  overflow-y: scroll;
+  grid-column: 1 / 2;
+  grid-row: 1 /2;
+
   border: yellowgreen 1px solid;
   margin: 0;
 }

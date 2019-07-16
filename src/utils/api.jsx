@@ -8,9 +8,9 @@ export const fetchTopics = async () => {
   return data.topics;
 };
 
-export const fetchArticles = async (topic, sortby) => {
+export const fetchArticles = async (topic, sort_by, order) => {
   const { data } = await axios.get(`${baseURL}/articles`, {
-    params: { topic, sortby }
+    params: { topic, sort_by, order }
   });
 
   return data.articles;

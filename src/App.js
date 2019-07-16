@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         <Heading />
         <Nav />
-        <Router className="main">
+        <Router className="router">
           <Articles path="/" />
           <Articles path="/topics/:topic" />
           <ArticlePage path="articles/:article_id" />
