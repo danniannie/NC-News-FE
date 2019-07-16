@@ -5,6 +5,7 @@
   grid-template-rows: 2fr 1fr 10fr 1fr;
   grid-template-areas: "heading" "nav" "main" "footer";
   text-align: center;
+  font-family: "Miriam Libre", sans-serif;
 }
 
 .heading {

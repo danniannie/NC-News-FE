@@ -9,7 +9,7 @@ class Nav extends Component {
   render() {
     const { topics } = this.state;
     return (
-      <div className="nav">
+      <section className="nav">
         <Link to={"/"}>Home</Link>
         {topics.map(topic => {
           return (
@@ -18,7 +18,7 @@ class Nav extends Component {
             </Link>
           );
         })}
-      </div>
+      </section>
     );
   }
   componentDidMount = async () => {

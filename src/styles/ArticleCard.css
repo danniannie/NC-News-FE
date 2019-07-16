@@ -1,5 +1,8 @@
 .articleCard {
   border: 1px solid black;
-  padding: 10px;
-  margin: 2px 0px;
+  padding: 15px;
+  margin: 1px 0px;
+  text-align: left;
+  font-size: 0.9em;
+  width: 100%;
 }

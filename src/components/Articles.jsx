@@ -3,6 +3,7 @@ import * as api from "../utils/api";
 import { Link } from "@reach/router";
 import ArticleCard from "./ArticleCard";
 import "../styles/Articles.css";
+import Sort from "./Sort";
 
 class Articles extends Component {
   state = {
@@ -11,11 +12,12 @@ class Articles extends Component {
   };
 
   render() {
+    console.log(this.props);
     const { articles, isLoading } = this.state;
 
     return (
       <section className="article">
-        <nav className="sort">Sort by Date, Comments, Votes</nav>
+        <Sort />
         <section className="articles">
           {articles.map(article => (
             <ArticleCard key={article.article_id} article={article} />

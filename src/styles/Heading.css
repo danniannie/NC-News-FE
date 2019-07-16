@@ -1,0 +1,11 @@
+.heading {
+  background: #4f649b;
+  padding: 0;
+}
+
+.heading h1 {
+  color: white;
+  font-size: 3em;
+  font-family: "Miriam Libre", sans-serif;
+  margin: 10px 0;
+}
