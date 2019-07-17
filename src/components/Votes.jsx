@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "../styles/Votes.css";
 class Votes extends Component {
   state = {
     inc_votes: 0
@@ -9,10 +9,11 @@ class Votes extends Component {
 
     return (
       <div className="votes">
-        Votes: {votes} /
+        Votes: {votes} /<br />
         <span id="1" onClick={this.handleClick}>
           Vote UP /
         </span>
+        <br />
         <span id="-1" onClick={this.handleClick}>
           Vote DOWN
         </span>
