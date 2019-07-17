@@ -21,9 +21,11 @@ class ArticlePage extends Component {
             <section className="body">
               <h2>{article.title}</h2>
               <p className="text">{article.body}</p>
-              <p>Author: {article.author}</p>
-              <p>Created at: {article.created_at}</p>
-              <p>Topic: {article.topic}</p>
+              <div className="articleExtras">
+                <p>Author: {article.author}</p>
+                <p>Created at: {article.created_at}</p>
+                <p>Topic: {article.topic}</p>
+              </div>
             </section>
             <section>
               <Comments article_id={this.props.article_id} />

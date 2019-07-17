@@ -16,7 +16,7 @@ class CommentCard extends Component {
           <p>{author}</p>
           <p>{created_at}</p>
           {this.props.username === author ? (
-            <button onClick={this.handleClick}>DELETE!</button>
+            <button onClick={this.handleClick}>DELETE</button>
           ) : (
             ""
           )}

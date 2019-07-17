@@ -1,6 +1,6 @@
 .commentCard {
   border: 1px solid fuchsia;
-  padding: 0px 20px;
+  padding: 5px 10px;
   margin: 20px;
   font-size: 0.8em;
   display: grid;
@@ -13,4 +13,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.comment p {
+  margin: 10px 5px;
+}
+.comment button {
+  border: 1px black solid;
+  margin: 5px;
+  padding: 5px;
 }
