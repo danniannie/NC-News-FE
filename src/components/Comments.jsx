@@ -25,6 +25,7 @@ class Comments extends Component {
               key={comment.comment_id}
               comment={comment}
               article_id={article_id}
+              refreshComments={this.refreshComments}
             />
           );
         })}
@@ -42,6 +43,11 @@ class Comments extends Component {
     this.setState(state => {
       return { comments: [newComment, ...state.comments] };
     });
+  };
+
+  refreshComments = async article_id => {
+    const comments = await api.getComments(article_id);
+    this.setState({ comments });
   };
 }
 

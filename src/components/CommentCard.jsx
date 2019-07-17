@@ -24,8 +24,10 @@ class CommentCard extends Component {
   }
   handleClick = event => {
     const { comment_id } = this.props.comment;
+    const { refreshComments, article_id } = this.props;
+
     api.deleteComment(comment_id).then(() => {
-      //create a deleteComment function in comments, this filters all comments that aren't the one delted and sets the state as this
+      refreshComments(article_id);
     });
   };
 }
