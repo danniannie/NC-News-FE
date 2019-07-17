@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/CommentCard.css";
+import "../styles/Comments.css";
 import Votes from "./Votes";
 const CommentCard = ({
   comment: { comment_id, author, body, created_at, votes }

@@ -2,29 +2,34 @@ import React, { Component } from "react";
 import "../styles/Votes.css";
 class Votes extends Component {
   state = {
-    inc_votes: 0
+    voteChange: 0,
+    err: null
   };
   render() {
-    const { votes, comment_id } = this.props;
+    const { votes } = this.props;
 
     return (
       <div className="votes">
-        Votes: {votes} /<br />
-        <span id="1" onClick={this.handleClick}>
-          Vote UP /
-        </span>
+        Votes: {votes + this.state.voteChange} /<br />
+        {/* <span onClick={this.vote(1)}>Vote UP /</span>
         <br />
-        <span id="-1" onClick={this.handleClick}>
-          Vote DOWN
-        </span>
+        <span onClick={this.vote(-1)}>Vote DOWN</span> */}
       </div>
     );
   }
 
-  handleClick = event => {
-    const inc_votes = event.target.id;
-    this.setState({ inc_votes });
-  };
-}
+  // vote = increment => {
+  //   const { id } = this.props;
 
+  //   api.votes(id, increment).catch(err => {
+  //     this.setState(state => ({
+  //       voteChange: state.voteChange - increment
+  //     }));
+  //   });
+
+  //   this.setState(state => ({
+  //     voteChange: state.voteChange + increment
+  //   }));
+  // };
+}
 export default Votes;

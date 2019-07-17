@@ -2,3 +2,11 @@
   border: 1px orangered solid;
   width: 100vw;
 }
+
+.comment {
+  grid-area: comment;
+}
+
+.addComment {
+  border: 1px solid royalblue;
+}
