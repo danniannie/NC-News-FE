@@ -6,11 +6,12 @@ import AddComment from "./AddComment";
 
 class Comments extends Component {
   state = {
-    comments: []
+    comments: [],
+    username: "jessjelly"
   };
 
   render() {
-    const { comments } = this.state;
+    const { comments, username } = this.state;
     const { article_id } = this.props;
 
     return (
@@ -18,6 +19,7 @@ class Comments extends Component {
         <AddComment
           article_id={article_id}
           addNewComment={this.addNewComment}
+          username={username}
         />
         {comments.map(comment => {
           return (
@@ -26,6 +28,7 @@ class Comments extends Component {
               comment={comment}
               article_id={article_id}
               refreshComments={this.refreshComments}
+              username={username}
             />
           );
         })}

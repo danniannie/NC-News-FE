@@ -19,7 +19,7 @@ class AddComment extends Component {
             value={body}
             onChange={this.handleChange}
           />
-          <button type="submit">Clicky Click!</button>
+          <button type="submit">Add your comment!</button>
         </form>
         {err && <p>Error, please try again</p>}
       </div>
@@ -33,9 +33,9 @@ class AddComment extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { article_id, addNewComment } = this.props;
+    const { article_id, addNewComment, username } = this.props;
     const { body } = this.state;
-    const comment = { username: "jessjelly", body };
+    const comment = { username, body };
     api
       .postComment(comment, article_id)
       .then(comment => {
