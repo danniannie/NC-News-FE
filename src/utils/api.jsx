@@ -42,3 +42,8 @@ export const votes = async (id, increment, section) => {
   });
   return data.comments;
 };
+
+export const deleteComment = async comment_id => {
+  const { data } = await axios.delete(`${baseURL}/comments/${comment_id}`);
+  return data;
+};
