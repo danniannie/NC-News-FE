@@ -9,4 +9,16 @@
 
 .addComment {
   border: 1px solid royalblue;
+  padding: 10px;
+}
+
+.addComment input {
+  border: 1px black solid;
+  padding: 5px;
+  height: 20px;
+  margin: 5px;
+}
+
+.addComment button {
+  border: 1px solid black;
 }
