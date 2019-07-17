@@ -21,8 +21,9 @@ class CommentCard extends Component {
             ""
           )}
         </div>
-
-        <Votes id={comment_id} section="comments" votes={votes} />
+        <div className="commentVotes">
+          <Votes id={comment_id} section="comments" votes={votes} />
+        </div>
       </section>
     );
   }

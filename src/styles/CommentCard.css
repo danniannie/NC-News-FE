@@ -8,3 +8,9 @@
 
   grid-template-areas: "comment votes";
 }
+
+.commentVotes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

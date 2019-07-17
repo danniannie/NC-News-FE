@@ -21,4 +21,19 @@
 
 .addComment button {
   border: 1px solid black;
+  width: 60px;
+  height: 30px;
+  margin: 0%;
+  padding: 0;
+}
+
+.commentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.commentContainer form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

@@ -12,15 +12,17 @@ class AddComment extends Component {
     return (
       <div className="addComment">
         Add Comment Here...
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="post your comments here..."
-            value={body}
-            onChange={this.handleChange}
-          />
-          <button type="submit">Add your comment!</button>
-        </form>
+        <div className="commentContainer">
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              placeholder="Post your comment here..."
+              value={body}
+              onChange={this.handleChange}
+            />
+            <button type="submit">Add your comment!</button>
+          </form>
+        </div>
         {err && <p>Error, please try again</p>}
       </div>
     );

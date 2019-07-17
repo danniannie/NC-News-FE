@@ -1,20 +1,35 @@
 .articleCard {
-  border: 1px solid black;
-  padding: 15px;
-  margin: 0px 0px;
+  border: 1px solid #818d92;
+
   text-align: left;
   font-size: 0.9em;
   color: black;
   cursor: pointer;
   display: grid;
   grid-template-columns: 4fr 1fr;
+  margin: 10px;
 }
 
-.articleVotes {
+.articleCard:hover {
+  box-shadow: 0px 0px 10px 2px #6d8ad6;
+  transform: scale(1.02);
+  transition: all 200ms ease-out;
+  cursor: pointer;
+}
+
+.articleVote {
   grid-area: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .articleText {
   grid-area: 2/3;
+}
+
+.articleCard p {
+  margin: 10px;
+  padding: 5px;
 }
 
 @media only screen and (min-width: 600px) {
