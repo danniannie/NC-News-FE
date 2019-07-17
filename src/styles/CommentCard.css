@@ -1,3 +1,9 @@
 .commentCard {
   border: 1px solid fuchsia;
+  padding: 0px 20px;
+  margin: 20px;
+  font-size: 0.8em;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: "comment" "votes";
 }

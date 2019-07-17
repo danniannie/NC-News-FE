@@ -17,16 +17,18 @@ class ArticlePage extends Component {
         {isLoading ? (
           <p>Loading...</p>
         ) : (
-          <section>
-            <h2>{article.title}</h2>
-            <p>{article.body}</p>
-            <h5>Author: {article.author}</h5>
-            <p>Created at: {article.created_at}</p>
-            <p>Topic: {article.topic}</p>
+          <main>
+            <section className="body">
+              <h2>{article.title}</h2>
+              <p className="text">{article.body}</p>
+              <p>Author: {article.author}</p>
+              <p>Created at: {article.created_at}</p>
+              <p>Topic: {article.topic}</p>
+            </section>
             <section>
               <Comments article_id={this.props.article_id} />
             </section>
-          </section>
+          </main>
         )}
       </section>
     );

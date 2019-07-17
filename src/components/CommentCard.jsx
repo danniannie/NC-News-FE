@@ -1,12 +1,19 @@
 import React from "react";
 import "../styles/CommentCard.css";
-const CommentCard = ({ comment: { author, body, created_at, votes } }) => {
+import Votes from "./Votes";
+const CommentCard = ({
+  comment: { comment_id, author, body, created_at, votes }
+}) => {
   return (
     <section className="commentCard">
-      <p>{body}</p>
-      <p>{author}</p>
-      <p>{created_at}</p>
-      <p>{votes}</p>
+      <div className="comment">
+        {" "}
+        <p>{body}</p>
+        <p>{author}</p>
+        <p>{created_at}</p>
+      </div>
+
+      <Votes comment_id={comment_id} votes={votes} />
     </section>
   );
 };
