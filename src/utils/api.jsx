@@ -35,3 +35,10 @@ export const postComment = async (comment, article_id) => {
   );
   return data.comment;
 };
+
+export const votes = async (id, increment, section) => {
+  const { data } = await axios.patch(`${baseURL}/${section}/${id}`, {
+    inc_votes: increment
+  });
+  return data.comments;
+};

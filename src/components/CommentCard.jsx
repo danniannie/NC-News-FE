@@ -2,9 +2,9 @@ import React from "react";
 import "../styles/CommentCard.css";
 import "../styles/Comments.css";
 import Votes from "./Votes";
-const CommentCard = ({
-  comment: { comment_id, author, body, created_at, votes }
-}) => {
+
+const CommentCard = props => {
+  const { comment_id, author, body, created_at, votes } = props.comment;
   return (
     <section className="commentCard">
       <div className="comment">
@@ -14,7 +14,7 @@ const CommentCard = ({
         <p>{created_at}</p>
       </div>
 
-      <Votes comment_id={comment_id} votes={votes} />
+      <Votes id={comment_id} section="comments" votes={votes} />
     </section>
   );
 };

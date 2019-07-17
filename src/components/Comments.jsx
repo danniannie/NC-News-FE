@@ -12,6 +12,7 @@ class Comments extends Component {
   render() {
     const { comments } = this.state;
     const { article_id } = this.props;
+
     return (
       <section className="comments">
         <AddComment
@@ -19,7 +20,13 @@ class Comments extends Component {
           addNewComment={this.addNewComment}
         />
         {comments.map(comment => {
-          return <CommentCard key={comment.comment_id} comment={comment} />;
+          return (
+            <CommentCard
+              key={comment.comment_id}
+              comment={comment}
+              article_id={article_id}
+            />
+          );
         })}
       </section>
     );

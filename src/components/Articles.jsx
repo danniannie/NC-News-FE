@@ -29,11 +29,10 @@ class Articles extends Component {
     );
   }
 
-  handleClick = event => {
-    const sort = event.target.id;
-    const sort_by = sort.split(" ")[0];
-    const order = sort.split(" ")[1];
-
+  handleClick = value => {
+    const sort_by = value.split(" ")[0];
+    const order = value.split(" ")[1];
+    console.log(sort_by, order);
     this.setState({ sort_by, order });
   };
 

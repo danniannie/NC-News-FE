@@ -16,22 +16,41 @@
   grid-area: nav;
   border: green 1px solid;
 }
-.router {
+/* .router {
   grid-area: router;
   height: 71vh;
   width: 100vw;
   overflow-y: scroll;
-}
+} */
 .main {
   height: 100%;
   border: red solid 1px;
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr;
+  /* display: grid; */
+  /* grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr; */
   overflow-y: scroll;
   width: 100%;
 }
 .footer {
   grid-area: footer;
   border: blue solid 1px;
+}
+
+@media only screen and (min-width: 600px) {
+  .router {
+    grid-area: router;
+    height: 71vh;
+    width: 100vw;
+    overflow-y: scroll;
+  }
+
+  .main {
+    height: 100%;
+    border: red solid 1px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    overflow-y: scroll;
+    width: 100%;
+  }
 }

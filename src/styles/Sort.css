@@ -1,25 +1,44 @@
 .intro {
-  border: white 1px solid;
-  font-size: 0.6em;
-  color: black;
+  display: none;
 }
 
 .box {
-  background: #81ae9d;
-  padding: 0px 5px 5px 5px;
+  display: none;
 }
 
-.box button {
-  width: 100%;
-  height: 100%;
-  font-family: "Miriam Libre", sans-serif;
-  font-size: 0.7em;
-  padding: 2px;
-  border-radius: 0px;
-  background: whitesmoke;
-  border: black;
+.dropDownNav select {
+  border: 1px black solid;
 }
 
-.box p {
-  padding: 5px 5px 0px 5px;
+@media only screen and (min-width: 600px) {
+  .intro {
+    display: block;
+    border: white 1px solid;
+    font-size: 0.6em;
+    color: black;
+  }
+  .dropDownNav {
+    display: none;
+  }
+
+  .box {
+    display: block;
+    background: #81ae9d;
+    padding: 0px 5px 5px 5px;
+  }
+
+  .box button {
+    width: 100%;
+    height: 100%;
+    font-family: "Miriam Libre", sans-serif;
+    font-size: 0.7em;
+    padding: 2px;
+    border-radius: 0px;
+    background: whitesmoke;
+    border: black;
+  }
+
+  .box p {
+    padding: 5px 5px 0px 5px;
+  }
 }

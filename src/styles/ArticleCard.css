@@ -5,6 +5,17 @@
   text-align: left;
   font-size: 0.9em;
   color: black;
-
   cursor: pointer;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.articleVotes {
+  grid-area: 1/2;
+}
+.articleText {
+  grid-area: 2/3;
+}
+
+@media only screen and (min-width: 600px) {
 }
