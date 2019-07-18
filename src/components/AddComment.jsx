@@ -11,10 +11,11 @@ class AddComment extends Component {
 
     return (
       <div className="addComment">
-        Add Comment Here...
-        <div className="commentContainer">
-          <form onSubmit={this.handleSubmit}>
+        <div>
+          <form onSubmit={this.handleSubmit} className="commentContainer">
+            <label htmlFor="commentInput">Add Comment Here...</label>
             <textarea
+              id="commentInput"
               type="text"
               rows="3"
               cols="30"
@@ -37,20 +38,22 @@ class AddComment extends Component {
 
   handleSubmit = event => {
     const { body } = this.state;
-
     event.preventDefault();
     const { article_id, addNewComment, username } = this.props;
-
-    const comment = { username, body };
-    api
-      .postComment(comment, article_id)
-      .then(comment => {
-        addNewComment(comment);
-        this.setState({ body: "" });
-      })
-      .catch(err => {
-        this.setState({ err });
-      });
+    if (body.length) {
+      const comment = { username, body };
+      api
+        .postComment(comment, article_id)
+        .then(comment => {
+          addNewComment(comment);
+          this.setState({ body: "" });
+        })
+        .catch(err => {
+          this.setState({ err });
+        });
+    } else {
+      //change colour to red and display comment
+    }
   };
 }
 

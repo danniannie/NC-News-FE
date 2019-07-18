@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 class Sort extends Component {
   state = {
-    sort: ""
+    sort: "created_at asc"
   };
   render() {
     return (
@@ -25,10 +25,10 @@ class Sort extends Component {
             id="sort"
             onChange={event => {
               const { value } = event.target;
-              this.setState({ sort: value });
-              console.log(this.state);
-              //value is not getting updated at the first click although it does pull through the right data!
-              this.props.handleClick(this.state.sort);
+              this.setState({ sort: value }, () => {
+                this.props.handleClick(this.state.sort);
+              });
+              console.log(this.state, "state");
             }}
             value={this.state.sort}
           >
