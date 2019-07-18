@@ -1,19 +1,26 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
+import "../styles/CommentCard.css";
 
 class AddComment extends Component {
   state = {
     body: "",
-    err: null
+    err: null,
+    conditional: "textBox"
   };
   render() {
-    const { body, err } = this.state;
+    const { body, err, conditional } = this.state;
 
     return (
       <div className="addComment">
         <div>
           <form onSubmit={this.handleSubmit} className="commentContainer">
             <label htmlFor="commentInput">Add Comment Here...</label>
+            {conditional === "incorrect" ? (
+              <p>Please include text</p>
+            ) : (
+              <span />
+            )}
             <textarea
               id="commentInput"
               type="text"
@@ -22,6 +29,7 @@ class AddComment extends Component {
               placeholder="Post your comment here..."
               value={body}
               onChange={this.handleChange}
+              className={conditional}
             />
             <button type="submit">Add your comment!</button>
           </form>
@@ -37,7 +45,7 @@ class AddComment extends Component {
   };
 
   handleSubmit = event => {
-    const { body } = this.state;
+    const { body, conditional } = this.state;
     event.preventDefault();
     const { article_id, addNewComment, username } = this.props;
     if (body.length) {
@@ -52,7 +60,7 @@ class AddComment extends Component {
           this.setState({ err });
         });
     } else {
-      //change colour to red and display comment
+      this.setState({ conditional: "incorrect" });
     }
   };
 }
