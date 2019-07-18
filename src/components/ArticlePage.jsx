@@ -4,6 +4,8 @@ import "../styles/ArticlePage.css";
 import Comments from "./Comments";
 import { navigate } from "@reach/router";
 import PropTypes from "prop-types";
+import Moment from "react-moment";
+import "moment-timezone";
 
 class ArticlePage extends Component {
   state = {
@@ -25,7 +27,10 @@ class ArticlePage extends Component {
               <p className="text">{article.body}</p>
               <div className="articleExtras">
                 <p>Author: {article.author}</p>
-                <p>Created at: {article.created_at}</p>
+                <p>
+                  Created at:{" "}
+                  <Moment format="Do MMM YY LT">{article.created_at}</Moment>
+                </p>
                 <p>Topic: {article.topic}</p>
               </div>
             </section>

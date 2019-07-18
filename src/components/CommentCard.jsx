@@ -2,6 +2,8 @@ import "../styles/CommentCard.css";
 import "../styles/Comments.css";
 import Votes from "./Votes";
 import * as api from "../utils/api";
+import Moment from "react-moment";
+import "moment-timezone";
 
 import React, { Component } from "react";
 
@@ -14,7 +16,9 @@ class CommentCard extends Component {
           {" "}
           <p>{body}</p>
           <p>{author}</p>
-          <p>{created_at}</p>
+          <p>
+            <Moment format="Do MMM YY LT">{created_at}</Moment>
+          </p>
           {this.props.username === author ? (
             <button onClick={this.handleClick}>DELETE</button>
           ) : (
