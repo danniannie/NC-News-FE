@@ -8,24 +8,29 @@ import Sort from "./Sort";
 class Articles extends Component {
   state = {
     articles: [],
-
     sort_by: "created_at",
-    order: "asc"
+    order: "asc",
+    isLoading: true
   };
 
   render() {
-    const { articles } = this.state;
+    const { articles, isLoading } = this.state;
 
     return (
-      <section className="main">
-        <Sort handleClick={this.handleClick} />
-
-        <section className="articles">
-          {articles.map(article => (
-            <ArticleCard key={article.article_id} article={article} />
-          ))}
-        </section>
-      </section>
+      <div>
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <section className="main">
+            <Sort handleClick={this.handleClick} />
+            <section className="articles">
+              {articles.map(article => (
+                <ArticleCard key={article.article_id} article={article} />
+              ))}{" "}
+            </section>
+          </section>
+        )}
+      </div>
     );
   }
 
@@ -42,7 +47,7 @@ class Articles extends Component {
 
     try {
       const articles = await api.fetchArticles(topic, sort_by, order);
-      this.setState({ articles });
+      this.setState({ articles, isLoading: false });
     } catch (err) {
       navigate("/error", {
         state: {
