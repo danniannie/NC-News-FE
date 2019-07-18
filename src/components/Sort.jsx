@@ -28,7 +28,6 @@ class Sort extends Component {
               this.setState({ sort: value }, () => {
                 this.props.handleClick(this.state.sort);
               });
-              console.log(this.state, "state");
             }}
             value={this.state.sort}
           >

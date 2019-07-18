@@ -52,7 +52,7 @@ class ArticlePage extends Component {
 }
 
 ArticlePage.propTypes = {
-  article_id: PropTypes.number
+  article_id: PropTypes.string
 };
 
 export default ArticlePage;

@@ -45,7 +45,7 @@ class AddComment extends Component {
   };
 
   handleSubmit = event => {
-    const { body, conditional } = this.state;
+    const { body } = this.state;
     event.preventDefault();
     const { article_id, addNewComment, username } = this.props;
     if (body.length) {

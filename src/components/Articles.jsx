@@ -38,7 +38,6 @@ class Articles extends Component {
   handleClick = value => {
     const sort_by = value.split(" ")[0];
     const order = value.split(" ")[1];
-    console.log(sort_by, order);
     this.setState({ sort_by, order });
   };
 
