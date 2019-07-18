@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
-
+import { navigate } from "@reach/router";
 import ArticleCard from "./ArticleCard";
 import "../styles/Articles.css";
 import Sort from "./Sort";
@@ -40,8 +40,17 @@ class Articles extends Component {
     const { topic } = this.props;
     const { sort_by, order } = this.state;
 
-    const articles = await api.fetchArticles(topic, sort_by, order);
-    this.setState({ articles });
+    try {
+      const articles = await api.fetchArticles(topic, sort_by, order);
+      this.setState({ articles });
+    } catch (err) {
+      navigate("/error", {
+        state: {
+          errmsg: "Sorry this topic is not available.",
+          replace: true
+        }
+      });
+    }
   };
 
   componentDidUpdate = async (prevProps, prevState) => {
@@ -59,7 +68,3 @@ class Articles extends Component {
 }
 
 export default Articles;
-
-// Sort by: <Link to={"/articles?sortby=date"}>Date</Link> / Comment{ " " }
-// <Link to={"/articles?sortby=comments"}>Comments</Link>{ " " }
-// <Link to={"/articles?sortby=votes"}>Votes</Link>

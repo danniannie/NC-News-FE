@@ -20,15 +20,11 @@
   grid-area: router;
   height: 71vh;
   width: 100vw;
-  overflow-y: scroll;
+  overflow: scroll;
 }
 .main {
   height: 100%;
   border: red solid 1px;
-  /* display: grid; */
-  /* grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr; */
-  overflow-y: scroll;
   width: 100%;
 }
 .footer {
@@ -41,7 +37,7 @@
     grid-area: router;
     height: 71vh;
     width: 100vw;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .main {
@@ -50,7 +46,7 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr;
-    overflow-y: scroll;
+
     width: 100%;
   }
 }

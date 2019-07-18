@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import { Router } from "@reach/router";
 import ArticlePage from "./components/ArticlePage";
+import Error from "./components/Error";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Articles path="/" />
           <Articles path="/topics/:topic" />
           <ArticlePage path="articles/:article_id" />
+          <Error default path="/error" />
         </Router>
         <Footer />
       </div>

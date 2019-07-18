@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as api from "../utils/api";
 import "../styles/ArticlePage.css";
 import Comments from "./Comments";
+import { navigate } from "@reach/router";
 
 class ArticlePage extends Component {
   state = {
@@ -38,9 +39,14 @@ class ArticlePage extends Component {
 
   componentDidMount = async () => {
     const { article_id } = this.props;
-    const article = await api.fetchArticlebyId(article_id);
-
-    this.setState({ article, isLoading: false });
+    try {
+      const article = await api.fetchArticlebyId(article_id);
+      this.setState({ article, isLoading: false });
+    } catch (err) {
+      navigate("/error", {
+        state: { errmsg: "Sorry this article is not found.", replace: true }
+      });
+    }
   };
 }
 

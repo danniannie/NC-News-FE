@@ -14,8 +14,10 @@ class AddComment extends Component {
         Add Comment Here...
         <div className="commentContainer">
           <form onSubmit={this.handleSubmit}>
-            <input
+            <textarea
               type="text"
+              rows="3"
+              cols="30"
               placeholder="Post your comment here..."
               value={body}
               onChange={this.handleChange}
@@ -34,9 +36,11 @@ class AddComment extends Component {
   };
 
   handleSubmit = event => {
+    const { body } = this.state;
+
     event.preventDefault();
     const { article_id, addNewComment, username } = this.props;
-    const { body } = this.state;
+
     const comment = { username, body };
     api
       .postComment(comment, article_id)
