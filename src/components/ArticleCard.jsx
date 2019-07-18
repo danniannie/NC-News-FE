@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import Votes from "./Votes";
+import PropTypes from "prop-types";
 
 const ArticleCard = ({ article: { title, article_id, votes } }) => {
   return (
@@ -14,6 +15,10 @@ const ArticleCard = ({ article: { title, article_id, votes } }) => {
       </div>
     </div>
   );
+};
+
+ArticleCard.propTypes = {
+  article: PropTypes.object
 };
 
 export default ArticleCard;

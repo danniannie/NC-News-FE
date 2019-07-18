@@ -4,6 +4,7 @@ import { navigate } from "@reach/router";
 import ArticleCard from "./ArticleCard";
 import "../styles/Articles.css";
 import Sort from "./Sort";
+import PropTypes from "prop-types";
 
 class Articles extends Component {
   state = {
@@ -71,5 +72,9 @@ class Articles extends Component {
     }
   };
 }
+
+Articles.propTypes = {
+  topic: PropTypes.string
+};
 
 export default Articles;

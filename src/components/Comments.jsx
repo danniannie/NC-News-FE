@@ -3,6 +3,7 @@ import * as api from "../utils/api";
 import CommentCard from "./CommentCard";
 import "../styles/Comments.css";
 import AddComment from "./AddComment";
+import PropTypes from "prop-types";
 
 class Comments extends Component {
   state = {
@@ -53,5 +54,9 @@ class Comments extends Component {
     this.setState({ comments });
   };
 }
+
+Comments.propTypes = {
+  article_id: PropTypes.number
+};
 
 export default Comments;

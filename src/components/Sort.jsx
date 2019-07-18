@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Sort.css";
+import PropTypes from "prop-types";
 
 class Sort extends Component {
   state = {
@@ -9,7 +10,6 @@ class Sort extends Component {
     return (
       <div className="sortBy">
         <section className="intro">
-          {" "}
           <h2>
             Welcome to NC News, the place to read the latest news and have your
             say on the current issues.
@@ -98,5 +98,9 @@ class Sort extends Component {
     );
   }
 }
+
+Sort.propTypes = {
+  handleClick: PropTypes.func
+};
 
 export default Sort;

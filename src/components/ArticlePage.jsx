@@ -3,6 +3,7 @@ import * as api from "../utils/api";
 import "../styles/ArticlePage.css";
 import Comments from "./Comments";
 import { navigate } from "@reach/router";
+import PropTypes from "prop-types";
 
 class ArticlePage extends Component {
   state = {
@@ -49,5 +50,9 @@ class ArticlePage extends Component {
     }
   };
 }
+
+ArticlePage.propTypes = {
+  article_id: PropTypes.number
+};
 
 export default ArticlePage;
