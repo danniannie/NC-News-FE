@@ -13,7 +13,7 @@ class Nav extends Component {
         <Link to={"/"}>Home</Link>
         {topics.map(topic => {
           return (
-            <Link to={`/topics/${topic.slug}`} key={topic.slug}>
+            <Link to={`/topics/${topic.slug}`} data-cy={topic.slug} key={topic.slug}>
               {topic.slug}
             </Link>
           );

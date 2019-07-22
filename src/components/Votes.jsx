@@ -11,7 +11,7 @@ class Votes extends Component {
   render() {
     const { votes } = this.props;
     return (
-      <div className="voteContainer"><div className="votes">
+      <div className="voteContainer"><div className="votes" data-cy='votes'>
         Votes: {votes + this.state.voteChange}
         <br />
         <button
