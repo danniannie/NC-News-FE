@@ -7,6 +7,8 @@ import "moment-timezone";
 
 import React, { Component } from "react";
 
+
+
 class CommentCard extends Component {
   render() {
     const { comment_id, author, body, created_at, votes } = this.props.comment;
@@ -14,16 +16,16 @@ class CommentCard extends Component {
       <section className="commentCard">
         <div className="comment">
           {" "}
-          <p>{body}</p>
-          <p>{author}</p>
+          <p className='commentBody'>{body}</p>
+          <p className='author'>{author}</p>
           <p>
             <Moment format="Do MMM YY LT">{created_at}</Moment>
           </p>
           {this.props.username === author ? (
             <button onClick={this.handleClick}>DELETE</button>
           ) : (
-            ""
-          )}
+              ""
+            )}
         </div>
         <div className="commentVotes">
           <Votes id={comment_id} section="comments" votes={votes} />

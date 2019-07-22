@@ -1,11 +1,11 @@
 .commentCard {
-  border: 1px solid fuchsia;
+  border: 1px solid #033b66;
   padding: 5px 10px;
   margin: 20px;
   font-size: 0.8em;
   display: grid;
   grid-template-columns: 4fr 1fr;
-
+font-family: 'Karla', sans-serif;
   grid-template-areas: "comment votes";
 }
 
@@ -18,16 +18,18 @@
 .comment p {
   margin: 10px 5px;
 }
-.comment button {
-  border: 1px black solid;
-  margin: 5px;
-  padding: 5px;
+.comment button:hover{
+   box-shadow: 0px 0px 10px 2px #6d8ad6;
+  transform: scale(1.02);
+  transition: all 200ms ease-out;
 }
 
-.textBox {
-  border: black solid 1px;
+.commentBody {
+  font-size: 1.2em;
+  
 }
 
-.incorrect {
-  background: red;
+.author {
+  font-weight: bold;
 }
+

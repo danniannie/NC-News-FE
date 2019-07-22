@@ -21,24 +21,24 @@ class ArticlePage extends Component {
         {isLoading ? (
           <p>Loading...</p>
         ) : (
-          <main>
-            <section className="body">
-              <h2>{article.title}</h2>
-              <p className="text">{article.body}</p>
-              <div className="articleExtras">
-                <p>Author: {article.author}</p>
-                <p>
-                  Created at:{" "}
-                  <Moment format="Do MMM YY LT">{article.created_at}</Moment>
-                </p>
-                <p>Topic: {article.topic}</p>
-              </div>
-            </section>
-            <section>
-              <Comments article_id={this.props.article_id} />
-            </section>
-          </main>
-        )}
+            <main>
+              <section className="body">
+                <h2>{article.title}</h2>
+                <p className="text">{article.body}</p>
+                <div className="articleExtras">
+                  <p>Author: {article.author}</p>
+                  <p>
+                    Created at:{" "}
+                    <Moment format="Do MMM YY LT">{article.created_at}</Moment>
+                  </p>
+                  <p>Topic: {article.topic}</p>
+                </div>
+              </section>
+              <section>
+                <Comments article_id={this.props.article_id} />
+              </section>
+            </main>
+          )}
       </section>
     );
   }

@@ -5,7 +5,7 @@
   grid-template-rows: 2fr 1fr 71vh 1fr;
   grid-template-areas: "heading" "nav" "router" "footer";
   text-align: center;
-  font-family: "Miriam Libre", sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 .heading {
@@ -14,7 +14,6 @@
 }
 .nav {
   grid-area: nav;
-  border: green 1px solid;
 }
 .router {
   grid-area: router;
@@ -24,12 +23,11 @@
 }
 .main {
   height: 100%;
-  border: red solid 1px;
+
   width: 100%;
 }
 .footer {
   grid-area: footer;
-  border: blue solid 1px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -42,7 +40,7 @@
 
   .main {
     height: 100%;
-    border: red solid 1px;
+    
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr;

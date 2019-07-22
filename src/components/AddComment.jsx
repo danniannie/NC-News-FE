@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import "../styles/CommentCard.css";
+import "../styles/Comments.css";
 
 class AddComment extends Component {
   state = {
@@ -14,24 +15,27 @@ class AddComment extends Component {
     return (
       <div className="addComment">
         <div>
-          <form onSubmit={this.handleSubmit} className="commentContainer">
-            <label htmlFor="commentInput">Add Comment Here...</label>
+          <form onSubmit={this.handleSubmit} >
+            <div className="commentContainer">
+              <label htmlFor="commentInput">Leave a comment</label><br></br>
+
+              <textarea
+                id="commentInput"
+                type="text"
+                rows="3"
+                cols="30"
+                placeholder="Write your comment here..."
+                value={body}
+                onChange={this.handleChange}
+                className={conditional}
+              />
+              <button type="submit">Post Comment</button></div>
             {conditional === "incorrect" ? (
-              <p>Please include text</p>
+              <p> Please include text</p>
             ) : (
-              <span />
-            )}
-            <textarea
-              id="commentInput"
-              type="text"
-              rows="3"
-              cols="30"
-              placeholder="Post your comment here..."
-              value={body}
-              onChange={this.handleChange}
-              className={conditional}
-            />
-            <button type="submit">Add your comment!</button>
+                <p></p>
+              )}
+
           </form>
         </div>
         {err && <p>Error, please try again</p>}

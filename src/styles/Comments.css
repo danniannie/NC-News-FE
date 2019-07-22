@@ -1,5 +1,6 @@
 .comments {
-  border: 1px orangered solid;
+  border-top: 1px black solid;
+  
   width: 100vw;
 }
 
@@ -8,32 +9,55 @@
 }
 
 .addComment {
-  border: 1px solid royalblue;
+  border-bottom: 1px black solid;
   padding: 10px;
+  
 }
 
-.addComment input {
+.commentContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#commentInput {
   border: 1px black solid;
   padding: 5px;
-  height: 20px;
-  margin: 5px;
+  height: 80px;
+  width: 700px;
+  margin: 20px;
+  font-size: 1em;
 }
 
 .addComment button {
   border: 1px solid black;
-  width: 60px;
-  height: 30px;
+  background: whitesmoke;
   margin: 0%;
-  padding: 0;
+  padding: 10px;
+  font-size: 0.9em;
 }
 
-.commentContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+.addComment button:hover {
+ box-shadow: 0px 0px 10px 2px #6d8ad6;
+  transform: scale(1.02);
+  transition: all 200ms ease-out;
 }
-.commentContainer form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+
+
+.incorrect {
+ background: #FE5555;
+ color: black;
+}
+
+.comment button {
+  border: 1px black solid;
+  margin: 5px;
+  padding: 5px;
+ 
+}
+
+.textBox {
+  border: black solid 1px;
 }

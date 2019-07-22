@@ -11,7 +11,7 @@ class Votes extends Component {
   render() {
     const { votes } = this.props;
     return (
-      <div className="votes">
+      <div className="voteContainer"><div className="votes">
         Votes: {votes + this.state.voteChange}
         <br />
         <button
@@ -30,7 +30,8 @@ class Votes extends Component {
         >
           -
         </button>
-      </div>
+      </div></div>
+
     );
   }
 
@@ -39,7 +40,7 @@ class Votes extends Component {
 
     api
       .votes(id, increment, section)
-      .then(response => {})
+      .then(response => { })
       .catch(err => {
         this.setState(state => ({
           voteChange: state.voteChange - increment

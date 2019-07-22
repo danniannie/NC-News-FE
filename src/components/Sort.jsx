@@ -66,6 +66,7 @@ class Sort extends Component {
           >
             Most Commented
           </button>
+
           <button
             id="comment_count desc"
             onClick={event => {
@@ -76,7 +77,7 @@ class Sort extends Component {
           </button>
 
           <button
-            id="votes asc"
+            id="votes desc"
             onClick={event => {
               this.props.handleClick(event.target.id);
             }}
@@ -85,7 +86,7 @@ class Sort extends Component {
           </button>
 
           <button
-            id="votes desc"
+            id="votes asc"
             onClick={event => {
               this.props.handleClick(event.target.id);
             }}
