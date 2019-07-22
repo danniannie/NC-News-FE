@@ -10,17 +10,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 Below are a number of packages you will need to install in order to run this project:
 
-To install all the dependencies, run the script ```$ npm i```
 
+- [Reach Router](https://reach.tech/router)
+- [Axios](https://github.com/axios/axios)
+- [Moment](https://momentjs.com/)
 
-[Reach Router](https://reach.tech/router)
-[Axios](https://github.com/axios/axios)
-[Moment](https://momentjs.com/)
-
+To install all the dependencies, run the script: ```$ npm i```
 
 ### Installing
 
-To get the development environment running please use 
+To get the development environment running please use:
 ```
 $ npm start
 ```
