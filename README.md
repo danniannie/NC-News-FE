@@ -35,12 +35,12 @@ The project can also be accessed using Netlify: https://nc-news-dy.netlify.com
 ## Built With
 
 - [React](https://reactjs.org/)
-- [Reach Router] - (https://reach.tech/router)
+- [ReachRouter] - (https://reach.tech/router)
 - [HTML/CSS]
 
 ## Authors
 
-- **Dannielle Young ** [Danniannie](https://github.com/Danniannie)
+**Dannielle Young **  [Github - Danniannie](https://github.com/Danniannie)
 
 ## License
 
