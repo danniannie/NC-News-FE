@@ -21,7 +21,7 @@ class ArticlePage extends Component {
         {isLoading ? (
           <p>Loading...</p>
         ) : (
-            <main>
+            <main data-cy='articleBody'>
               <section className="body">
                 <h2>{article.title}</h2>
                 <p className="text">{article.body}</p>

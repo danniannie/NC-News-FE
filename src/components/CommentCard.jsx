@@ -13,7 +13,7 @@ class CommentCard extends Component {
   render() {
     const { comment_id, author, body, created_at, votes } = this.props.comment;
     return (
-      <section className="commentCard">
+      <section className="commentCard" data-cy='comments'>
         <div className="comment">
           {" "}
           <p className='commentBody'>{body}</p>

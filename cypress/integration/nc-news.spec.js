@@ -1,4 +1,7 @@
 describe('/', () => {
+
+
+
   it('Loads the page', () => {
     cy.visit('http://localhost:3000/')
   });
@@ -16,6 +19,11 @@ describe('/', () => {
   });
 
   describe('Articles Component', () => {
+    beforeEach(() => {
+      cy.server()
+      cy.route('GET', 'https://nc-news-dy.herokuapp.com/api/articles/', 'fx:articles.json')
+
+    });
     it('Loads the articles', () => {
       cy.visit('http://localhost:3000/')
       cy.get('[data-cy=articles]')
@@ -60,4 +68,34 @@ describe('/', () => {
     });
   });
 
+  describe('/articles/*', () => {
+    beforeEach(() => {
+      cy.server()
+      cy.route('GET', 'https://nc-news-dy.herokuapp.com/api/articles/33', 'fx:singleArticles.json')
+      cy.route('GET', 'https://nc-news-dy.herokuapp.com/api/articles/33/comments', 'fx:comments.json')
+    });
+    it('Loads article text', () => {
+      cy.visit('http://localhost:3000/articles/33')
+      cy.get('[data-cy=articleBody]')
+        .children()
+        .contains('Seafood substitutions are increasing')
+    });
+    it('Loads add comment box', () => {
+      cy.visit('http://localhost:3000/articles/33')
+      cy.get('[data-cy=addComments')
+    })
+    it('Loads comments', () => {
+      cy.visit('http://localhost:3000/articles/33')
+      cy.get('[data-cy=comments')
+    })
+  });
+
 });
+
+
+
+
+//votes component, button makes the vote go up and other makes it go down
+//link on the footer goes to correct link
+// 
+

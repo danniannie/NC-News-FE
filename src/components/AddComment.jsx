@@ -13,7 +13,7 @@ class AddComment extends Component {
     const { body, err, conditional } = this.state;
 
     return (
-      <div className="addComment">
+      <div className="addComment" data-cy='addComments'>
         <div>
           <form onSubmit={this.handleSubmit} >
             <div className="commentContainer">

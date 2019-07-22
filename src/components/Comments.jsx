@@ -15,7 +15,7 @@ class Comments extends Component {
     const { article_id, username } = this.props;
 
     return (
-      <section className="comments">
+      <section className="comments" >
         <AddComment
           article_id={article_id}
           addNewComment={this.addNewComment}
