@@ -9,7 +9,7 @@ class Nav extends Component {
   render() {
     const { topics } = this.state;
     return (
-      <section className="nav">
+      <section className="nav" data-cy='nav'>
         <Link to={"/"}>Home</Link>
         {topics.map(topic => {
           return (

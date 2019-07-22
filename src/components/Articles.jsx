@@ -18,19 +18,19 @@ class Articles extends Component {
     const { articles, isLoading } = this.state;
 
     return (
-      <div>
+      <div data-cy='articles'>
         {isLoading ? (
           <p>Loading...</p>
         ) : (
-          <section className="main">
-            <Sort handleClick={this.handleClick} />
-            <section className="articles">
-              {articles.map(article => (
-                <ArticleCard key={article.article_id} article={article} />
-              ))}{" "}
+            <section className="main">
+              <Sort handleClick={this.handleClick} />
+              <section className="articles">
+                {articles.map(article => (
+                  <ArticleCard key={article.article_id} article={article} />
+                ))}{" "}
+              </section>
             </section>
-          </section>
-        )}
+          )}
       </div>
     );
   }

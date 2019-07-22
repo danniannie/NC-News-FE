@@ -8,7 +8,7 @@ class Sort extends Component {
   };
   render() {
     return (
-      <div className="sortBy">
+      <div className="sortBy" data-cy='sort'>
         <section className="intro">
           <h2>
             Welcome to NC News, the place to read the latest news and have your
