@@ -12,11 +12,11 @@ Below are a number of packages you will need to install in order to run this pro
 
 To install all the dependencies, run the script ```$ npm i```
 
-```
-[Reach Router] - (https://reach.tech/router)
-[Axios] - (https://github.com/axios/axios)
-[Moment] - (https://momentjs.com/)
-```
+
+[Reach Router](https://reach.tech/router)
+[Axios](https://github.com/axios/axios)
+[Moment](https://momentjs.com/)
+
 
 ### Installing
 
@@ -36,7 +36,7 @@ The project can also be accessed using Netlify: https://nc-news-dy.netlify.com
 
 - [React](https://reactjs.org/)
 - [Reach Router](https://reach.tech/router)
-- [HTML/CSS]
+- HTML/CSS
 
 ## Authors
 
