@@ -35,7 +35,7 @@ The project can also be accessed using Netlify: https://nc-news-dy.netlify.com
 ## Built With
 
 - [React](https://reactjs.org/)
-- [ReachRouter] - (https://reach.tech/router)
+- [Reach Router](https://reach.tech/router)
 - [HTML/CSS]
 
 ## Authors
