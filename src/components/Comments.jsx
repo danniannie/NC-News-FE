@@ -7,13 +7,12 @@ import PropTypes from "prop-types";
 
 class Comments extends Component {
   state = {
-    comments: [],
-    username: "jessjelly"
+    comments: []
   };
 
   render() {
-    const { comments, username } = this.state;
-    const { article_id } = this.props;
+    const { comments } = this.state;
+    const { article_id, username } = this.props;
 
     return (
       <section className="comments">

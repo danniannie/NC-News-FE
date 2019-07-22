@@ -11,5 +11,25 @@
 }
 
 .heading h1 {
-  margin: 10px 0;
+  margin: 10px 0 0 0;
+  padding: 0px;
+}
+
+.loggedIn {
+  color: white;
+  text-align: right;
+  padding: 0px;
+  margin: 2px 5px 5px 0px;
+  font-size: 0.9em;
+}
+
+@media only screen and (min-width: 600px) {
+.loggedIn {
+  font-size: 1em;
+  color: white;
+  text-align: right;
+  padding: 0px;
+  margin: 0px 5px 5px 0px;
+}
+
 }

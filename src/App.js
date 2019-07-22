@@ -15,15 +15,18 @@ import ArticlePage from "./components/ArticlePage";
 import Error from "./components/Error";
 
 class App extends Component {
+  state = {
+    username: 'jessjelly'
+  }
   render() {
     return (
       <div className="App">
-        <Heading />
+        <Heading username={this.state.username} />
         <Nav />
         <Router className="router">
           <Articles path="/" />
           <Articles path="/topics/:topic" />
-          <ArticlePage path="articles/:article_id" />
+          <ArticlePage path="articles/:article_id" username={this.state.username} />
           <Error default path="/error" />
         </Router>
         <Footer />

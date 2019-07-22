@@ -35,7 +35,7 @@ class ArticlePage extends Component {
                 </div>
               </section>
               <section>
-                <Comments article_id={this.props.article_id} />
+                <Comments article_id={this.props.article_id} username={this.props.username} />
               </section>
             </main>
           )}
