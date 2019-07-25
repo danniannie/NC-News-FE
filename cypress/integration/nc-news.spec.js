@@ -87,6 +87,5 @@ describe('/articles/*', () => {
   })
 });
 
-});
 
 
